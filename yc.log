@@ -1,0 +1,32 @@
+2018-03-11 10:11:57  com.yc.hadoop.hdfs.Hadoop_HdfsApi01.main(Hadoop_HdfsApi01.java:30)  test不存在!!!
+2018-03-11 10:11:57  com.yc.hadoop.hdfs.Hadoop_HdfsApi01.main(Hadoop_HdfsApi01.java:32)  创建文件test成功...
+2018-03-11 10:21:44  com.yc.hadoop.hdfs.Hadoop_HdfsApi02.main(Hadoop_HdfsApi02.java:51)  hdfs操作失败!!!
+java.io.FileNotFoundException: File /user/Administrator does not exist.
+	at org.apache.hadoop.hdfs.DistributedFileSystem.listStatusInternal(DistributedFileSystem.java:981)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.access$1000(DistributedFileSystem.java:118)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$24.doCall(DistributedFileSystem.java:1041)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$24.doCall(DistributedFileSystem.java:1038)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.listStatus(DistributedFileSystem.java:1048)
+	at com.yc.hadoop.hdfs.Hadoop_HdfsApi02.main(Hadoop_HdfsApi02.java:45)
+2018-03-11 10:22:11  com.yc.hadoop.hdfs.Hadoop_HdfsApi02.main(Hadoop_HdfsApi02.java:51)  hdfs操作失败!!!
+java.io.FileNotFoundException: File /user/Administrator does not exist.
+	at org.apache.hadoop.hdfs.DistributedFileSystem.listStatusInternal(DistributedFileSystem.java:981)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.access$1000(DistributedFileSystem.java:118)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$24.doCall(DistributedFileSystem.java:1041)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$24.doCall(DistributedFileSystem.java:1038)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.listStatus(DistributedFileSystem.java:1048)
+	at com.yc.hadoop.hdfs.Hadoop_HdfsApi02.main(Hadoop_HdfsApi02.java:45)
+2018-03-11 10:29:10  com.yc.hadoop.hdfs.Hadoop_HdfsApi02.main(Hadoop_HdfsApi02.java:52)  hdfs操作失败!!!
+java.io.FileNotFoundException: File /home/navy does not exist.
+	at org.apache.hadoop.hdfs.DistributedFileSystem.listStatusInternal(DistributedFileSystem.java:981)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.access$1000(DistributedFileSystem.java:118)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$24.doCall(DistributedFileSystem.java:1041)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$24.doCall(DistributedFileSystem.java:1038)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.listStatus(DistributedFileSystem.java:1048)
+	at com.yc.hadoop.hdfs.Hadoop_HdfsApi02.main(Hadoop_HdfsApi02.java:46)
+2018-03-11 10:40:28  com.yc.hadoop.hdfs.Hadoop_HdfsApi03.main(Hadoop_HdfsApi03.java:47)  修改文件名成功...
+2018-03-11 10:44:26  com.yc.hadoop.hdfs.Hadoop_HdfsApi04.main(Hadoop_HdfsApi04.java:49)  文件 test 不存在, 请重新输入...
+2018-03-11 10:44:30  com.yc.hadoop.hdfs.Hadoop_HdfsApi04.main(Hadoop_HdfsApi04.java:46)  文件 yc 删除成功...
