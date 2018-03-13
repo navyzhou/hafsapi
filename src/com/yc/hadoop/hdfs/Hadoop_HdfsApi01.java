@@ -40,15 +40,15 @@ public class Hadoop_HdfsApi01 {
 			FSDataOutputStream fdos = fs.create(file, new Progressable() {
 				@Override
 				public void progress() {
-					//执行进度显示
+					// 执行进度显示
 					System.out.print(">>");
 				}
 			}); // 文件系统数据输出流
 			
-			Scanner input = new Scanner(System.in);  //扫描器对象
+			Scanner input = new Scanner(System.in);  // 扫描器对象
 			System.out.print("请输入内容:");
 			String word = input.nextLine();
-			fdos.write(word.getBytes());  //向文件系统中的文件中写入内容
+			fdos.write(word.getBytes());  // 向文件系统中的文件中写入内容
 			fdos.flush();
 			fdos.close();
 			input.close();

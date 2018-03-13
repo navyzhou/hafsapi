@@ -16,19 +16,19 @@ import org.apache.log4j.Logger;
  * @author navy
  */
 public class Hadoop_HdfsApi05 {
-	private static Logger log = Logger.getLogger(Hadoop_HdfsApi05.class);  //创建日志记录器
+	private static Logger log = Logger.getLogger(Hadoop_HdfsApi05.class);  // 创建日志记录器
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		FileSystem fs = null;
 		try {
-			Configuration conf = new Configuration();  //加载配置文件
-			URI uri = new URI("hdfs://192.168.30.130:9000/");  //连接资源位置
+			Configuration conf = new Configuration();  // 加载配置文件
+			URI uri = new URI("hdfs://192.168.30.130:9000/");  // 连接资源位置
 			
-			fs = FileSystem.get(uri,conf,"navy");  //创建文件系统实例对象
+			fs = FileSystem.get(uri,conf,"navy");  // 创建文件系统实例对象
 
-			//FileStatus[] files = fs.listStatus(new Path("/user/navy/"));  //列出文件
-			FileStatus[] files = fs.listStatus(new Path("/input"));  //列出文件
+			//FileStatus[] files = fs.listStatus(new Path("/user/navy/"));  // 列出文件
+			FileStatus[] files = fs.listStatus(new Path("/input"));  // 列出文件
 			System.out.println("该目录下的文件名有：");
 			
 			for (FileStatus f : files) {
@@ -36,7 +36,7 @@ public class Hadoop_HdfsApi05 {
 			}
 
 			System.out.print("请输入要查看的文件名：");
-			Path p= new Path("/input/"+input.next()); //默认是读取/user/navy/下的指定文件
+			Path p= new Path("/input/"+input.next()); // 默认是读取/user/navy/下的指定文件
 
 			System.out.println("要查看的文件路径为：" + fs.getFileStatus(p).getPath());
 			

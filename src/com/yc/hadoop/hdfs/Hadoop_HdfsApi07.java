@@ -14,8 +14,8 @@ import org.apache.log4j.Logger;
  * @company 源辰信息
  * @author navy
  */
-public class Hadoop_HdfsApi06 {
-	private static Logger log = Logger.getLogger(Hadoop_HdfsApi06.class);  // 创建日志记录器
+public class Hadoop_HdfsApi07 {
+	private static Logger log = Logger.getLogger(Hadoop_HdfsApi07.class);  // 创建日志记录器
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {

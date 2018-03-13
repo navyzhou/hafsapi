@@ -26,8 +26,8 @@ public class Hadoop_HdfsApi02 {
 			fs = FileSystem.get(uri,conf,"navy");  //创建文件系统实例对象
 
 
-			//FileStatus[] files = fs.listStatus(new Path("/input/"));  //列出文件
-			FileStatus[] files = fs.listStatus(new Path("/user/navy/"));  //列出文件，hadoop的hdfs的根目录
+			//FileStatus[] files = fs.listStatus(new Path("/input/"));  // 列出文件
+			FileStatus[] files = fs.listStatus(new Path("/user/navy/"));  // 列出文件，hadoop的hdfs的根目录
 			System.out.println("当前目录下的文件信息如下：");
 			for (FileStatus f : files) {
 				System.out.println("\t" + f.getPath().getName());
