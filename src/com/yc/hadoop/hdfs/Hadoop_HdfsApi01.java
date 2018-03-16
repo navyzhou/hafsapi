@@ -25,7 +25,7 @@ public class Hadoop_HdfsApi01 {
 			URI uri = new URI("hdfs://192.168.30.130:9000/"); // 连接资源位置
 			FileSystem fs = FileSystem.get(uri, conf); // 创建文件系统实例对象
 
-			Path file = new Path("test"); // hadoop文件对象, 类似java的File类
+			Path file = new Path("test.txt"); // hadoop文件对象, 类似java的File类
 
 			if (fs.exists(file)) { // 判断文件是否存在
 				log.debug(file + "存在...");

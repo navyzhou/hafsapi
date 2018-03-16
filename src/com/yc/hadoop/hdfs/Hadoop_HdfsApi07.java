@@ -10,7 +10,7 @@ import org.apache.hadoop.fs.Path;
 import org.apache.log4j.Logger;
 
 /**
- * 下载hdfs上的指定文件
+ * 上传本地文件到hdfs上
  * @company 源辰信息
  * @author navy
  */
@@ -23,26 +23,24 @@ public class Hadoop_HdfsApi07 {
 		FileSystem fs = null;
 		try {
 			Configuration conf = new Configuration(); // 加载配置文件
-			URI uri = new URI("hdfs://192.168.30.130:9000/");  // 连接资源位置
-			fs = FileSystem.get(uri, conf ,"navy");  // 创建文件系统实例对象
-
-			FileStatus[] files = fs.listStatus(new Path("/input/"));  // 列出文件
+			URI uri = new URI("hdfs://192.168.30.130:9000/");   // 连接资源位置
+			fs = FileSystem.get(uri, conf); // 创建文件系统实例对象
 			
-			System.out.println("可以选择的文件名：");
+			Path uploadPath = new Path("/user/navy/"); // 上传文件保存的目录
+		
+			
+			System.out.print("请输入要上传的文件：");
+			Path p = new Path(input.next());
+			
+			fs.copyFromLocalFile(p,uploadPath); // 上传文件到指定目录
+			log.debug("上传成功....");
+			
+			FileStatus[] files = fs.listStatus(uploadPath);  // 列出文件
+			System.out.println("上传目录中的文件：");
+			
 			for (FileStatus f : files) {
 				System.out.println("\t" + f.getPath().getName());
 			}
-			System.out.print("请输入要下载的文件名：");
-			Path p= new Path("/input/"+input.next());
-			
-			System.out.print("下载文件存放目录：");
-			Path dst=new Path(input.next());
-			
-			// 注意：此时必须在window里面配置hadoop环境，必须定位winutils.exe文件
-			fs.copyToLocalFile(false,p,dst,true); // 最后一个参数表示不用原始的本地文件系统，改用java的io流 
-			
-			log.debug("下载成功....");
-			
 		} catch (Exception e) {
 			log.error("hdfs操作失败!!!", e);
 		}
